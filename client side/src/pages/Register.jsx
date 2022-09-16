@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
@@ -40,11 +41,11 @@ const Input = styled.input`
     padding: 10px;
 `;
 
-// const Agreement = styled.span`
-//     font-size: 12px;
-//     margin: 20px 0px;
-//     border: 2px solid;
-// `;
+const Agreement = styled.span`
+    font-size: 12px;
+    margin: 20px 0px;
+    // border: 2px solid;
+`;
 
 const Button = styled.button`
     width: 40%;
@@ -68,15 +69,15 @@ const Register = () => {
       <Wrapper>
         <Title>CREATE AN ACCOUNT</Title>
         <Form>
-          <Input type="text" required placeholder="First Name" />
-          <Input type="text" required placeholder="Last Name" />
+          <Input type="text" required placeholder="Full Name" />
           <Input type="email" required placeholder="Email" />
           <Input type="password" required placeholder="Password" />
           <Input type="password" required placeholder="Confirm Password" />
 
-          {/* <Agreement>
-            Lorem ipsum dolor sit amet, consectetur adipisicing.
-          </Agreement> */}
+          <Agreement>
+            By creating an account you accepting all our  <b>terms condition. and privacy policies</b>
+            <p>Already Have An Account <Link to="/login">LOGIN</Link> </p>
+          </Agreement>
           <Button>CREATE</Button>
         </Form>
       </Wrapper>
